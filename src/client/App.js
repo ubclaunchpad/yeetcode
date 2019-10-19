@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
+import ReactImage from './assets/react.png';
 
 export default class App extends Component {
   state = { username: null };
