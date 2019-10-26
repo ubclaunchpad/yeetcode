@@ -9,7 +9,6 @@ cache:
 
 script:
   - npm run build
-  - npm run lint
 
 branches:
   only:
