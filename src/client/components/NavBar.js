@@ -46,13 +46,13 @@ export default function NavBar() {
     <div className={classes.root}>
       <FormGroup>
         <FormControlLabel
-          control={
+          control={(
             <Switch
               checked={auth}
               onChange={handleChange}
               aria-label="login switch"
             />
-          }
+          )}
           label={auth ? "Logout" : "Login"}
         />
       </FormGroup>

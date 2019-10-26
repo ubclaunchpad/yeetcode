@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from "react";
 import "./app.css";
 import NavBar from "./components/NavBar";
