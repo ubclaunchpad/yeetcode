@@ -13,6 +13,8 @@ dist/
 # Optional npm cache directory
 .npm
 
+package-lock
+
 # Optional eslint cache
 .eslintcache
 
