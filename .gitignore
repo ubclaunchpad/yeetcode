@@ -10,6 +10,9 @@ yarn-error.log*
 node_modules/
 dist/
 
+# Not supporting yarn
+yarn-lock
+
 # Optional npm cache directory
 .npm
 
