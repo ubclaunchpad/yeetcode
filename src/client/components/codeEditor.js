@@ -1,4 +1,5 @@
-import React from 'react';
+// eslint-disable
+import React from "react";
 import socketIOClient from "socket.io-client";
 
 class CodeEditor extends React.Component{
