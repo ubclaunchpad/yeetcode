@@ -10,5 +10,6 @@ export default class App extends Component {
         <NavBar />
         <CodeEditor />
       </div>
+    )
   }
 }
