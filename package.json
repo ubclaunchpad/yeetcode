@@ -9,7 +9,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "lint": "eslint '**/*.js' "
+    "lint": "eslint **/*.js"
   },
   "husky": {
     "hooks": {
