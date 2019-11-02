@@ -1,15 +1,14 @@
-/* eslint-disable */
-import React, { Component } from "react";
-import "./app.css";
+import React, { Component } from 'react';
+import './app.css';
+import CodeEditor from './components/codeEditor';
 import NavBar from "./components/NavBar";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
         <NavBar />
+        <CodeEditor />
       </div>
-    );
   }
 }
-export default App;
