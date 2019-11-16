@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './LabelBlock.css';
+import './LabelBlock.css';
 
 export default function LabelBlock(props) {
     const { name } = props;

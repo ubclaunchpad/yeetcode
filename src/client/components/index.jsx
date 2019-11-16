@@ -1,1 +1,2 @@
-export default from './RightPanel';
+/* eslint-disable */
+export { default as RightPanel } from './RightPanel';
