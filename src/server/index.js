@@ -13,7 +13,6 @@ app.use(express.static('dist'));
 app.post('/runCode', function(req, res) {
     const code = req.body.code;
     let response = codeCheck.runCode(code);
-    console.log(typeof(response));
     res.send(response);
 })
 
