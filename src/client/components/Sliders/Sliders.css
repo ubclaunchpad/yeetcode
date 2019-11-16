@@ -1,0 +1,11 @@
+.slider-container {
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.slider {
+  width: 100%;
+  padding: 0 30px;
+}

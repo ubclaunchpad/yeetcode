@@ -45,7 +45,7 @@ export default class Resizable extends React.Component{
     }
 
 
-    let minWidth = 0;
+    let minWidth = 145;
     let maxWidth = document.body.offsetWidth;
     if (e.clientX > minWidth && e.clientX < maxWidth) {
       this.setState({ newWidth: { width: e.clientX } });
