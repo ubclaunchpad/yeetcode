@@ -1,5 +1,5 @@
 h1 {
-  font-size: 30px;
+  font-size: 20px;
   color: black;
 }
 
@@ -11,21 +11,24 @@ body {
 
 .flex-container {
   display: flex;
-  background-color: lightgray;
+  background-color: #f1f1f1;
   width: 500px;
   height: 1000px;
   text-align: left;
+  flex-direction: column;
   
 
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color: lightgray;
   margin: 10px;
   padding: 20px;
   font-size: 15px;
-  width: 500px;  /* Or whatever */
-  height: 937px; /* Or whatever */
+  width: 300;  /* Or whatever */
+  height: 150; /* Or whatever */
   text-align: left;
+  flex-direction: column;
+  font-family: monospace;
 
 }
