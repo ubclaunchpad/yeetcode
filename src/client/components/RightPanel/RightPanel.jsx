@@ -1,7 +1,8 @@
 /* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-import TitleBlock from '../LabelBlock';
+import LabelBlock from '../LabelBlock';
+import CodeEditor from '../CodeEditor';
 
 class RightPanel extends React.Component {
     constructor(props) {
@@ -12,9 +13,10 @@ class RightPanel extends React.Component {
         return (
           <div className="rightPanelContainer">
             {/* name prop value hard coded for now  */}
-            <TitleBlock name="randomUser21" /> 
+            <LabelBlock name="randomUser21" /> 
             <div className="opponentEditorContainer">
               {/* This is the Opponent Editor */}
+              <CodeEditor />
             </div>
             <div className="submitButtonArea">
               {/* This is the Submit Button Area */}

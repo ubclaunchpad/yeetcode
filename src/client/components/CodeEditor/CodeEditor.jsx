@@ -1,22 +1,24 @@
-// import React from 'react';
+import React from 'react';
 // import { render } from "react-dom";
 // import AceEditor from "react-ace";
 
 // import "ace-builds/src-noconflict/mode-java";
 // import "ace-builds/src-noconflict/theme-github";
 
-// class CodeEditor extends React.Component {
-//     constructor(props) {
-//         super(props);
-//     }
+class CodeEditor extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-//     render() {
-//         return (
-//           <React.Fragment>
-//           </React.Fragment>
-//         );
-//     }
+    // handleChange(newValue) {
+    //     console.log("change", newValue);
+    // }
 
-// }
+    render() {
+        return (
+            <div> code editor </div>
+        );
+    }
+}
 
-// export default CodeEditor;
+export default CodeEditor;
