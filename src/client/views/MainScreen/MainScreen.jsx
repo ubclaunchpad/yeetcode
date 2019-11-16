@@ -3,7 +3,7 @@ import React from 'react';
 import NavBar from '../../components/NavBar';
 import Resizable from '../../components/Resizable';
 import CodeEditor from '../../components/CodeEditor';
-import DiscreteSlider from '../../components/sliders';
+import DiscreteSlider from '../../components/Sliders';
 import TitleBlock from '../../components/LabelBlock';
 
 import { RightPanel } from '../../components';
