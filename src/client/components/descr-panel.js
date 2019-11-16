@@ -20,8 +20,8 @@ export default function DescrPanel() {
           Reverse string
         </h3>
       Write a function that reverses a string. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-      <hr></hr>
-      <hr></hr>
+      <hr/>
+      <hr/>
 
       <h4>Example 1:</h4>
       <div>
