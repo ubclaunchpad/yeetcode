@@ -1,14 +1,20 @@
+/* eslint-disable */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './LabelBlock.css';
 
 export default function LabelBlock(props) {
-    const { name } = props.name;
+    const { name } = props;
 
     return (
-        <div className = "title-area">
-            <h3> { name } </h3>
-        </div>
+      <div className="title-area">
+        <h3> 
+          {' '}
+          { name }
+          {' '}
+        </h3>
+      </div>
     );
 }
 
