@@ -1,14 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
-
-const useStyles = makeStyles({
-  root: {
-    width: 300
-  },
-  margin: {}
-});
 
 const marks = [
   {
@@ -30,10 +22,9 @@ function valuetext(value) {
 }
 
 export default function DiscreteSlider() {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root} className="slider">
+    <div className="slider">
       <Typography id="discrete-slider-always" gutterBottom>
         Your Progress
       </Typography>
@@ -46,9 +37,9 @@ export default function DiscreteSlider() {
         valueLabelDisplay="on"
         style={{ color: "green" }}
       />
-      <div className={classes.margin} className="slider" />
+      <div className="slider" />
       <Typography id="discrete-slider-always" gutterBottom>
-        Opponent's Progress
+        Opponent &apos; s Progress
       </Typography>
       <Slider
         defaultValue={80}
