@@ -1,0 +1,23 @@
+.main-screen-container {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    background-color: transparent;
+}
+  
+.left-panel {
+    border: solid;
+    width: 75%;
+}
+
+.right-panel {
+    margin-left: 15px;
+    border: dotted;
+    background-color: white;
+    width: 25%;
+}

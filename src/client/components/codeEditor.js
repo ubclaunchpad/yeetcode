@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import socketIOClient from "socket.io-client";
 
