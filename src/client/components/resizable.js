@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {Box} from "@material-ui/core";
 
@@ -14,6 +15,11 @@ export default class Resizable extends React.Component{
     isResizing: false,
     newWidth: {}
   };
+
+  static defaultProps = {
+    children: <></>,
+    className: ""
+  }
 
   constructor(props) {
     super(props);
@@ -54,11 +60,13 @@ export default class Resizable extends React.Component{
 
   render(){
     let {children, className} = this.props;
+    let {newWidth} = this.state;
 
     return(
-      <Box className={className} style={{width: this.state.newWidth.width}} display="flex">
+      <Box className={className} style={{width: newWidth.width}} display="flex">
         {children}
         <div
+          role="presentation"
           id="dragger"
           className="dragger"
           onMouseDown={event => {
@@ -71,3 +79,8 @@ export default class Resizable extends React.Component{
     );
   }
 }
+
+Resizable.propTypes = {
+  children: PropTypes.element,
+  className: PropTypes.string
+};
