@@ -4,4 +4,5 @@
     border: solid;
     text-align: left;
     padding: 16px 0 16px 24px;
+    /* word-wrap: break-word; */
 }
