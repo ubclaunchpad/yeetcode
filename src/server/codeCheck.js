@@ -1,39 +1,28 @@
-// import { exec } from "child_process";
-
+// main function that runs a code snippet provided as a `string`
 var runCode = (code) => {
-    // let code = `function getOdds(arr){
-    //     let ans = [];
-    //     for (let i = 0; i < arr.length; i+=2){
-    //         ans.push(arr[i])
-    //     }
-    //     return(ans.toString());
-    // }
-    // `;
     let questionId = 1;
 
     return generateTestResults(questionId, code);
 }
 
+// returns results fromt test cases as JSON object
 var generateTestResults = (questionId, code) => {
     functionName = 'getOdds';
     let testCases = getTestCases(questionId);
     
     let testCode = generateTestCode(testCases, functionName);
 
-    // console.log(code + testCode);
-    let x;
+    let result;
     try {
-        let ans = eval(code + testCode);
-        x = {
-            "numTestCasesPassed": ans[0],
-            "numTestCasesTotal": ans[1]
+        let evalResponse = eval(code + testCode);
+        result = {
+            "numTestCasesPassed": evalResponse[0],
+            "numTestCasesTotal": evalResponse[1]
         };
     } catch(e) {
-        let str = e.toString();
-        x = {"error" : str}
+        result = {"error" : e.toString()}
     }
-    console.log(x);
-    return(x);
+    return(result);
 }
 
 // returns an array of inputs/output for a questionId 
@@ -46,7 +35,6 @@ getTestCases = (questionId) => {
 }
 
 generateTestCode = (testCases, functionName) => {
-    let string = '';
     let individualTests = [];
 
     for (let testCase of testCases){
@@ -55,12 +43,9 @@ generateTestCode = (testCases, functionName) => {
         let line = functionName + '(' + input + ')';
         let testLine = line + '==' + expectedOutput + ' && ';
         individualTests.push(testLine.substring(0,testLine.length-3));
-        string+= testLine;
     }
 
-    // console.log(individualTests);
-
-    let x = `let count = 0;
+    let iterateOverTestCases = `let count = 0;
     for (let testCase of [${individualTests}] ){
         if(testCase){
             count++;
@@ -69,17 +54,9 @@ generateTestCode = (testCases, functionName) => {
 
     [count, ${individualTests.length}]
     `;
-    return(x);
-    // return ("console.log( " + string.substring(0,string.length-3) + ");");
-}
 
-runCode(`function getOdds(arr){
-    let ans = [];
-    for (let i = 0; i < arr.length; i+=2){
-        ans.push(arr[i])
-    }
-    return(ans.toString());
-}`);
+    return(iterateOverTestCases);
+}
 
 module.exports = {
     runCode,
