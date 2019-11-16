@@ -1,23 +1,13 @@
-h1 {
-  color: black;
-}
-
-body {
+/* body {
   text-align: center;
   margin: auto;
-}
-
-.slider {
-  margin: auto;
-  margin-top: 10%;
-  width: 80%;
 }
 
 .container {
   min-height: 500px;
   width: 100%;
   position: relative;
-}
+} */
 
 .dragger {
   position: absolute;

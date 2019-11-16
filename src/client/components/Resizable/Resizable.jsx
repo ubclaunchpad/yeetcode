@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import {Box} from "@material-ui/core";
 
+import './Resizable.css';
+
 /*
  This component can take in another component that you want to be resizable.
  Usage:
