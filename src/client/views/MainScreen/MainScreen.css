@@ -9,7 +9,7 @@
     flex: 1;
     background-color: transparent;
 }
-  
+
 .left-panel {
     border: solid;
     width: 75%;
@@ -20,4 +20,18 @@
     border: dotted;
     background-color: white;
     width: 25%;
+}
+
+.draggable-left {
+  background-color: white;
+  position: relative;
+  width: 100px;
+  flex-direction: column;
+  padding-right: 7px;
+}
+
+.draggable-right {
+  background-color: #f6f6f6;
+  position: relative;
+  flex-direction: column;
 }
