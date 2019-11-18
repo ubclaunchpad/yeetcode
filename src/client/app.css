@@ -7,30 +7,3 @@ body {
   text-align: center;
   margin: auto;
 }
-
-
-.flex-container {
-  display: flex;
-  background-color: #f1f1f1;
-  width: 500px;
-  height: 1000px;
-  text-align: left;
-  flex-direction: column;
-  font-family: Verdana, Arial;
-
-  
-
-}
-
-.flex-container > div {
-  background-color: lightgray;
-  margin: 10px;
-  padding: 20px;
-  font-size: 15px;
-  width: 300;  /* Or whatever */
-  height: 150; /* Or whatever */
-  text-align: left;
-  flex-direction: column;
-  font-family: monospace;
-
-}

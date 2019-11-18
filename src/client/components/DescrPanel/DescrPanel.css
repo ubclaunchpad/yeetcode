@@ -1,0 +1,21 @@
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+  text-align: left;
+  flex-direction: column;
+  font-family: Verdana, Arial;
+  height: 100%;
+  padding: 8px;
+}
+
+.flex-container > div {
+  background-color: lightgray;
+  margin: 10px;
+  padding: 20px;
+  font-size: 15px;
+  width: 300;  /* Or whatever */
+  height: 150; /* Or whatever */
+  text-align: left;
+  flex-direction: column;
+  font-family: monospace;
+}

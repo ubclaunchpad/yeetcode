@@ -1,9 +1,20 @@
+/* eslint-disable */
 const express = require('express');
 const os = require('os');
 
 const app = express();
+var server = require('http').createServer(app);
+const socket = require('./socket.js')(server);
+
+let codeCheck = require("./codeCheck.js");
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());  
 
 app.use(express.static('dist'));
-app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
+app.post('/runCode', function(req, res) {
+    const code = req.body.code;
+    let response = codeCheck.runCode(code);
+    res.send(response);
+})
 
-app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
+server.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));

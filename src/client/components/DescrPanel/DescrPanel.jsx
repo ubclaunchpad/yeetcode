@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React from 'react';
-import '../app.css';
+import './DescrPanel.css';
 
 // const useStyles = makeStyles({
 //   root: {
@@ -13,9 +13,9 @@ import '../app.css';
 export default function DescrPanel() {
 
   return (
-      
+
     <div className="flex-container">
-      
+
         <h3>
           Reverse string
         </h3>
@@ -34,8 +34,8 @@ export default function DescrPanel() {
         <p>Input: "Hannah"</p>
         <p>Output: "hannaH"</p>
       </div>
-    </div> 
-  
+    </div>
+
 
   );
 }
