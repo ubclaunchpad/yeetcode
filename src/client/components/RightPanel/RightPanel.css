@@ -1,0 +1,14 @@
+.right-panel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.opponent-editor {
+    flex-grow: 1;
+}
+
+.submit-button-area {
+    /* background-color: aqua; */
+    height: 20vh;
+}

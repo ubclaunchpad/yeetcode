@@ -1,8 +1,17 @@
 /* eslint-disable */
-import React from 'react';
 import PropTypes from 'prop-types';
-import LabelBlock from '../LabelBlock';
+import React from 'react';
 import CodeEditor from '../CodeEditor';
+import LabelBlock from '../LabelBlock';
+import Button from '@material-ui/core/Button';
+// import { makeStyles } from '@material-ui/core/styles';
+import './RightPanel.css';
+
+// const useStyles = makeStyles({
+//   runButton: {
+//     margin: theme.spacing(1),
+//   },
+// });
 
 class RightPanel extends React.Component {
     constructor(props) {
@@ -10,16 +19,27 @@ class RightPanel extends React.Component {
     }
 
     render() {
+      // const classes = useStyles();
+
         return (
-          <div className="rightPanelContainer">
+          <div className="right-panel-container">
             {/* name prop value hard coded for now  */}
             <LabelBlock name="randomUser21" /> 
-            <div className="opponentEditorContainer">
+            <div className="opponent-editor">
               {/* This is the Opponent Editor */}
               <CodeEditor />
             </div>
-            <div className="submitButtonArea">
+            <div className="submit-button-area">
               {/* This is the Submit Button Area */}
+                <Button
+                  variant="outlined"
+                  color="primary"
+                >
+                  Run Code
+                </Button>
+                <Button>
+                  Submit
+                </Button>
             </div>
           </div>
         );

@@ -2,11 +2,11 @@
 import React from 'react';
 import NavBar from '../../components/NavBar';
 import Resizable from '../../components/Resizable';
-import CodeEditor from '../../components/CodeEditor';
 import DiscreteSlider from '../../components/Sliders';
 import TitleBlock from '../../components/LabelBlock';
 
 import { RightPanel } from '../../components';
+import { CodeEditor } from '../../components';
 
 import {Box} from "@material-ui/core";
 
@@ -32,17 +32,21 @@ class MainScreen extends React.Component {
                   <Box className="draggable-right" display="flex" flexGrow={1}>
                     <>
                       <TitleBlock name="PineappleSlayer69" />
-                      <p>RIGHT</p>
+                      <div className="main-editor">
+                        <CodeEditor />
+                      </div>
                     </>
                   </Box>
                 </Box>
-                <DiscreteSlider />
+                <div>
+                  <DiscreteSlider />
+                </div>
+                
               </div>
               <div className="right-panel">
                 <RightPanel />
               </div>
             </div>
-            <CodeEditor />
           </div>
 
       );

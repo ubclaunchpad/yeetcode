@@ -22,6 +22,10 @@
     width: 25%;
 }
 
+.main-editor {
+    height: 100%;
+}
+
 .draggable-left {
   background-color: white;
   position: relative;
