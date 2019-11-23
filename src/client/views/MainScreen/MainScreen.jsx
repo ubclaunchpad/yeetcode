@@ -1,56 +1,61 @@
-/* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
+import { Box } from "@material-ui/core";
 import NavBar from '../../components/NavBar';
 import Resizable from '../../components/Resizable';
 import DiscreteSlider from '../../components/Sliders';
-import TitleBlock from '../../components/LabelBlock';
-
-import { RightPanel } from '../../components';
-import { CodeEditor } from '../../components';
-
-import {Box} from "@material-ui/core";
-
+import LabelBlock from '../../components/LabelBlock';
+import { RightPanel, CodeEditor } from '../../components';
 import './MainScreen.css';
 
+const MainScreen = React.memo(() => {
+  const [mainEditorValue, setMainCodeValue] = useState("");
 
-class MainScreen extends React.Component {
-    render() {
-        return (
-          <div className="main-screen-container">
-            <div className="header-area">
-              <NavBar />
-            </div>
-            <div className="content-area">
-              <div className="left-panel">
-                <Box className="container" display="flex">
-                  <Resizable className="draggable-left">
-                    <>
-                      <TitleBlock name="description" />
-                      <p>LEFT</p>
-                    </>
-                  </Resizable>
-                  <Box className="draggable-right" display="flex" flexGrow={1}>
-                    <>
-                      <TitleBlock name="PineappleSlayer69" />
-                      <div className="main-editor">
-                        <CodeEditor />
-                      </div>
-                    </>
-                  </Box>
-                </Box>
-                <div>
-                  <DiscreteSlider />
+  // update the state of the main editor
+  // NOTE: must change b/c rn this component rerendering every time which is BAD
+  const updateMainEditorValue = (newValue) => {
+    setMainCodeValue(newValue);
+  }
+  console.log("hello");
+  return (
+    <div className="main-screen-container">
+      <div className="header-area">
+        <NavBar />
+      </div>
+      <div className="content-area">
+        <div className="left-panel">
+          {/* <div className="main-editor-container"> */}
+          <Box className="container" display="flex">
+            <Resizable className="draggable-left">
+              <>
+                <div className="label-description">
+                  <LabelBlock name="description" />
                 </div>
-                
-              </div>
-              <div className="right-panel">
-                <RightPanel />
-              </div>
-            </div>
+                <p>LEFT</p>
+              </>
+            </Resizable>
+            <Box className="draggable-right" display="flex" flexGrow={1}>
+              <>
+                <div className="label-main-editor">
+                  <LabelBlock name="PineappleSlayer69" />
+                </div>
+                <div className="main-editor">
+                  <CodeEditor onChangeCallBack={updateMainEditorValue} value={mainEditorValue} />
+                  {/* <CodeEditor /> */}
+                </div>
+              </>
+            </Box>
+          </Box>
+          {/* </div> */}
+          <div className="slider-area">
+            <DiscreteSlider />
           </div>
-
-      );
-    }
-}
+        </div>
+        <div className="right-panel">
+          <RightPanel />
+        </div>
+      </div>
+    </div>
+  );
+});
 
 export default MainScreen;
