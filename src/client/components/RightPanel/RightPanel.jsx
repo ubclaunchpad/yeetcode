@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+/* eslint-disable */
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import AceEditor from "react-ace";
@@ -47,7 +47,7 @@ const RightPanel = (props) => {
           width="100%"
           height="100%"
           theme="github"
-          value = {code}
+          value={code}
           showPrintMargin={false}
           setOptions={{
             showLineNumbers: true,

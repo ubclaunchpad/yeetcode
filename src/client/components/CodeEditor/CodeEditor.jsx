@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import AceEditor from "react-ace";
 import PropTypes from 'prop-types';
@@ -45,7 +46,9 @@ CodeEditor.propTypes = {
   /* the callback fn to handle change of the editor's value */
   onChangeCallBack: PropTypes.func,
   /* the value to be displayed by code editor */
-  value: PropTypes.string
+  value: PropTypes.string,
+  /* socket (an object) */
+  socket: PropTypes.shape({ root: PropTypes.string.isRequired }),
 };
 
 CodeEditor.defaultProps = {
