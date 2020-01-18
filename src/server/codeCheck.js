@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // main function that runs a code snippet provided as a `string`
 var runCode = (code) => {
     let questionId = 1;

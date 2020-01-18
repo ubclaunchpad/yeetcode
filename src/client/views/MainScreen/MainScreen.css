@@ -2,30 +2,31 @@
     display: flex;
     flex-flow: column;
     height: 100vh;
+    background-color: #f5f5f5;
 }
 
 .content-area {
     display: flex;
     flex: 1;
-    background-color: transparent;
 }
 
 .left-panel {
-    border: solid;
+    display: flex;
+    flex-flow: column;
+    /* border: solid; */
+    border-right: 2px solid #e0e0e0;
     width: 75%;
 }
 
-.right-panel {
-    margin-left: 15px;
-    border: dotted;
-    background-color: white;
-    width: 25%;
+.container {
+    display: flex;
+    height: 100%;
 }
 
 .draggable-left {
   background-color: white;
   position: relative;
-  width: 100px;
+  width: 40vh;
   flex-direction: column;
   padding-right: 7px;
 }
@@ -34,4 +35,23 @@
   background-color: #f6f6f6;
   position: relative;
   flex-direction: column;
+}
+
+.label-main-editor {
+    background-color: white;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+.main-editor {
+    height: 100%;
+}
+
+.slider-area {
+    margin-top: auto;
+}
+
+.right-panel {
+    margin-left: 15px;
+    background-color: white;
+    width: 25%;
 }

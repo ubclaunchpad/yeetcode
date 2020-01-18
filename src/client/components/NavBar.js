@@ -44,7 +44,7 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <FormGroup>
+      {/* <FormGroup>
         <FormControlLabel
           control={(
             <Switch
@@ -55,7 +55,7 @@ export default function NavBar() {
           )}
           label={auth ? "Logout" : "Login"}
         />
-      </FormGroup>
+      </FormGroup> */}
       <AppBar position="static">
         <Toolbar>
           <IconButton
