@@ -7,9 +7,9 @@ var runCode = (code) => {
 
 // returns results fromt test cases as JSON object
 var generateTestResults = (questionId, code) => {
-    functionName = 'getOdds';
+    let functionName = 'getOdds';
     let testCases = getTestCases(questionId);
-    
+
     let testCode = generateTestCode(testCases, functionName);
 
     let result;
@@ -25,8 +25,8 @@ var generateTestResults = (questionId, code) => {
     return(result);
 }
 
-// returns an array of inputs/output for a questionId 
-getTestCases = (questionId) => {
+// returns an array of inputs/output for a questionId
+let getTestCases = (/*questionId*/) => {
     return  [
        ['[1,3,4]','[1,4]'],
        ['[1]','[1]'],
@@ -34,12 +34,12 @@ getTestCases = (questionId) => {
     ];
 }
 
-generateTestCode = (testCases, functionName) => {
+let generateTestCode = (testCases, functionName) => {
     let individualTests = [];
 
     for (let testCase of testCases){
-        input = testCase[0];
-        expectedOutput = testCase[1].toString();
+        let input = testCase[0];
+        let expectedOutput = testCase[1].toString();
         let line = functionName + '(' + input + ')';
         let testLine = line + '==' + expectedOutput + ' && ';
         individualTests.push(testLine.substring(0,testLine.length-3));

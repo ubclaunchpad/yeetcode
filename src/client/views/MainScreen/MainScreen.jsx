@@ -5,6 +5,7 @@ import Resizable from '../../components/Resizable';
 import CodeEditor from '../../components/CodeEditor';
 import DiscreteSlider from '../../components/Sliders';
 import TitleBlock from '../../components/LabelBlock';
+import DescrPanel from "../../components/DescrPanel";
 
 import { RightPanel } from '../../components';
 
@@ -22,29 +23,19 @@ class MainScreen extends React.Component {
             </div>
             <div className="content-area">
               <div className="left-panel">
-                <Box className="container" display="flex">
-                  <Resizable className="draggable-left">
-                    <>
-                      <TitleBlock name="description" />
-                      <p>LEFT</p>
-                    </>
-                  </Resizable>
-                  <Box className="draggable-right" display="flex" flexGrow={1}>
-                    <>
-                      <TitleBlock name="PineappleSlayer69" />
-                      <p>RIGHT</p>
-                    </>
-                  </Box>
-                </Box>
+                <Resizable
+                  leftComponent={<DescrPanel />}
+                  leftTitle="Description"
+                  rightComponent={<p>RIGHT</p>}
+                  rightTitle="PineappleSlayer69"
+                />
                 <DiscreteSlider />
               </div>
               <div className="right-panel">
                 <RightPanel />
               </div>
             </div>
-            <CodeEditor />
           </div>
-
       );
     }
 }
