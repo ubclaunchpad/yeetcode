@@ -63,3 +63,68 @@
 .custom-toggler:hover {
   background-color: #138a07;
 }
+
+.resizable-container {
+  min-height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.dragger {
+  position: absolute;
+  z-index: 2;
+  cursor: ew-resize;
+  width: 7px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #2c3645;
+}
+
+.dragger::after, .dragger::before {
+  content: '\2847';
+  display: block;
+  position: absolute;
+  text-align: center;
+  left: -2px;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  font-size: 24px;
+  top: 25%;
+  color: #9da7b7;
+}
+
+.dragger::after {
+  top: 75%;
+}
+
+.dragger::after, .dragger::before {
+  top: 50%!important;
+}
+
+.custom-toggler{
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 7px!important;
+  height: 50px;
+  margin-top: -25px;
+  top: 50%;
+  z-index: 3;
+  background-color: #717f97;
+}
+
+.custom-toggler:hover {
+  background-color: #138a07;
+}
+
+.draggable-left, .draggable-right {
+  overflow-x: hidden;
+}
