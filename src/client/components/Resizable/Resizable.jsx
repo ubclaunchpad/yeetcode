@@ -1,18 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TitleBlock from '../../components/LabelBlock';
 
 import {Box} from "@material-ui/core";
 
+import TitleBlock from '../LabelBlock';
+
 import './Resizable.css';
 
-/*
- This component can take in another component that you want to be resizable.
- Usage:
- <Resizable>
-  <h1>This title is resizable!</h1>
- </Resizable>
-*/
 export default class Resizable extends React.Component{
   state = {
     isResizing: false,
