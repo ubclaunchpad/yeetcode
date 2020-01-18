@@ -13,10 +13,11 @@ function addition(num1, num2) {
 `
 
 const CodeEditor = (props) => {
-  const { onChangeCallBack, value } = props;
+  const { onChangeCallBack, value, socket } = props;
 
   const onChange = (newValue) => {
     onChangeCallBack(newValue);
+    socket.emit("message", newValue);
   }
 
   return (

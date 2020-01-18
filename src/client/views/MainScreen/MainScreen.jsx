@@ -7,7 +7,7 @@ import LabelBlock from '../../components/LabelBlock';
 import { RightPanel, CodeEditor } from '../../components';
 import './MainScreen.css';
 
-const MainScreen = React.memo(() => {
+const MainScreen = React.memo((props) => {
   const [mainEditorValue, setMainCodeValue] = useState("");
 
   // update the state of the main editor
@@ -39,7 +39,7 @@ const MainScreen = React.memo(() => {
                   <LabelBlock name="PineappleSlayer69" />
                 </div>
                 <div className="main-editor">
-                  <CodeEditor onChangeCallBack={updateMainEditorValue} value={mainEditorValue} />
+                  <CodeEditor socket={props.socket} onChangeCallBack={updateMainEditorValue} value={mainEditorValue} />
                   {/* <CodeEditor /> */}
                 </div>
               </>
@@ -51,7 +51,7 @@ const MainScreen = React.memo(() => {
           </div>
         </div>
         <div className="right-panel">
-          <RightPanel />
+          <RightPanel socket={props.socket} />
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ exports = module.exports = function(server) {
     console.log('Client connected id: ' + socket.id);
 
     socket.on('message', code =>{
+      console.log(code)
       socket.broadcast.emit('update', code);
     })
   });
