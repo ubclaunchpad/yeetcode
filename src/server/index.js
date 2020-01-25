@@ -4,16 +4,21 @@ const os = require('os');
 
 const app = express();
 var server = require('http').createServer(app);
-const socket = require('./socket.js')(server);
 
-let codeCheck = require("./codeCheck.js");
+const codeCheck = require("./codeCheck.js");
+const problem = require('./helpers/problem');
+const socket = require('./socket.js')(server, problem);
+
+problem.getRandomProblem();
+
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json());  
 
 app.use(express.static('dist'));
-app.post('/runCode', function(req, res) {
+
+app.post('/api/runCode', function(req, res) {
     const code = req.body.code;
-    let response = codeCheck.runCode(code);
+    let response = codeCheck.runCode(code, problem.currentProblem);
     res.send(response);
 })
 

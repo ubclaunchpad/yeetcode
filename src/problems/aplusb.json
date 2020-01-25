@@ -1,0 +1,16 @@
+{
+  "name": "A + B",
+  "functionName": "aPlusB",
+  "testCases": [
+    {
+      "input": "1, 2",
+      "output": "3"
+    },
+    {
+      "input": "0, 1",
+      "output": "1"
+    }
+  ],
+  "stub": "/**\n* produces a + b.\n* @param {number} a\n* @param {number} b\n* @return {number}\n*/\n\nfunction aPlusB(a, b) {\n\n}",
+  "description": "<p>produce a + b</p>"
+}

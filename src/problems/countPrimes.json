@@ -1,0 +1,32 @@
+{
+  "name": "Count Primes",
+  "functionName": "countPrimes",
+  "testCases": [
+    {
+      "input": "5",
+      "output": "2"
+    },
+    {
+      "input": "10",
+      "output": "4"
+    },
+    {
+      "input": "19",
+      "output": "7"
+    },
+    {
+      "input": "4000",
+      "output": "550"
+    },
+    {
+      "input": "100000",
+      "output": "9592"
+    },
+    {
+      "input": "-1",
+      "output": "0"
+    }
+  ],
+  "stub": "/**\n* @param {number} n\n* @return {number}\n*/\nfunction countPrimes(n) {\n};",
+  "description": "<p>Count the number of prime numbers less than a non-negative number, n.</p><div>\nExample:\nInput: 10\nOutput: 4\nExplanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.</div>"
+}
