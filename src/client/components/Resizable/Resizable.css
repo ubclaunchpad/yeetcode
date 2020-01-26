@@ -65,7 +65,8 @@
 }
 
 .resizable-container {
-  min-height: 500px;
+  min-height: 70vh;
+  height: 1px;
   width: 100%;
   position: relative;
 }

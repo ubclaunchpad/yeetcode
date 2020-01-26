@@ -1,0 +1,56 @@
+{
+  "name": "Winning Score",
+  "functionName": "whoWon",
+  "testCases": [
+    {
+      "input": "[17,24,18,1,29,3]",
+      "output": "A"
+    },
+    {
+      "input": "[1,21,100,44,3,88]",
+      "output": "B"
+    },
+    {
+      "input": "[17,24,18,10,29,23]",
+      "output": "A"
+    },
+    {
+      "input": "[6,6,6,6,6,6]",
+      "output": "T"
+    },
+    {
+      "input": "[8,8,8,5,5,5]",
+      "output": "A"
+    },
+    {
+      "input": "[3,3,3,7,7,7]",
+      "output": "B"
+    },
+    {
+      "input": "[1,0,0,0,0,0]",
+      "output": "A"
+    },
+    {
+      "input": "[0,0,0,0,1,0]",
+      "output": "B"
+    },
+    {
+      "input": "[0,0,0,1,0,0]",
+      "output": "B"
+    },
+    {
+      "input": "[0,0,0,0,0,1]",
+      "output": "B"
+    },
+    {
+      "input": "[0,0,1,0,0,0]",
+      "output": "A"
+    },
+    {
+      "input": "[0,1,0,0,0,0]",
+      "output": "A"
+    }
+  ],
+  "stub": "/**\n* produces who won.\n* @param {Array.<number>} scores\n* @return {string}\n*/\n\nfunction whoWon(scores) {\n\n}",
+  "description": "<p>You record all of the scoring activity at a basketball game. Points are scored by a 3-point shot, a 2-point field goal, or a 1-point free throw.</p><p>You know the number of each of these types of scoring for the two teams: the Apples and the Bananas. Your job is to determine which team won, or if the game ended in a tie.</p><h4>Input Specification</h4><p>The first three elements of input describe the scoring of the Apples, and the next three elements of input describe the scoring of the Bananas. For each team, the first element contains the number of successful 3-point shots, the second element contains the number of successful 2-point field goals, and the third element contains the number of successful 1-point free throws. Each number will be an integer between 0 and 100, inclusive.</p><h4>Output Specification</h4><p>The output will be a single character. If the Apples scored more points than the Bananas, output A. If the Bananas scored more points than the Apples, output B. Otherwise, output T, to indicate a tie.</p><h4>Example 1</h4><div>Input: [10, 3, 7, 8, 9, 6]\n\nOutput: B</div><h4>Explanation of Output for Sample Input 1</h4><p>The Apples scored 10⋅3+3⋅2+7⋅1=43 points and the Bananas scored 8⋅3+9⋅2+6⋅1=48 points, and thus the Bananas won.</p><h4>Example 2</h4><div>Input: [7, 3, 0, 6, 4, 1]\n\nOutput: T</div><h4>Explanation of Output for Sample Input 2</h4><p>The Apples scored 7⋅3+3⋅2+0⋅1=27 points and the Bananas scored 6⋅3+4⋅2+1⋅1=27 points, and thus it was a tie game.</p>"
+}

@@ -4,11 +4,12 @@
   text-align: left;
   flex-direction: column;
   font-family: Verdana, Arial;
-  height: 100%;
+  height: inherit;
+  overflow-y: scroll;
   padding: 8px;
 }
 
-.flex-container > div {
+.flex-container div {
   background-color: lightgray;
   margin: 10px;
   padding: 20px;
@@ -18,4 +19,9 @@
   text-align: left;
   flex-direction: column;
   font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.flex-container p, .flex-container h4 {
+  margin-top: 12px;
 }

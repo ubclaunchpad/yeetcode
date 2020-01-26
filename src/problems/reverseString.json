@@ -1,0 +1,16 @@
+{
+  "name": "Reverse String",
+  "functionName": "reverseString",
+  "testCases": [
+    {
+      "input": "'hello'",
+      "output": "olleh"
+    },
+    {
+      "input": "'yoyo'",
+      "output": "oyoy"
+    }
+  ],
+  "stub": "/**\n* return reversed string.\n* @param {string} str\n* @return {string}\n*/\n\nfunction reverseString(str) {\n\n}",
+  "description": "Write a function that reverses a string. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.<hr/><h4>Example 1:</h4><div>  <p>Input: \"hello\"</p>  <p>Output: \"olleh\"</p></div><h4>Example 2:</h4><div>  <p>Input: \"Hannah\"</p>  <p>Output: \"hannaH\"</p></div>"
+}
